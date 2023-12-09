@@ -10,3 +10,15 @@
 	top:0px;
 	right:0px;
 }
+.w-85{
+	width:85%;
+}
+.w-15{
+	width:15%;
+}
+.icon-link{
+	color:var(--green_food);
+}
+.icon-link:hover{
+	color:var(--green_wedding);
+}
