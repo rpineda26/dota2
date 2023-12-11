@@ -2,8 +2,12 @@
 	--beige: #FAF1E4;
 	--green_vintage: #CEDEBD;
 	--green_food: rgb(158, 179, 132);
-	--green_wedding: rgb(67, 83, 52)
-
+	--green_wedding: rgb(67, 83, 52);
+	--monokai-pink:#FF6188;
+	--monokai-green:#A9DC76;
+	--monokai-yellow:#FFD866;
+	--monokai-blue:#78DCE8;
+	--monokai-purple:#AB9DF2;
 }
 .top-bar{
 	position:fixed;
@@ -18,8 +22,8 @@
 	width:15%;
 }
 .icon-link{
-	color:var(--green_food);
+	color:var(--monokai-pink);
 }
 .icon-link:hover{
-	color:var(--green_wedding);
+	color:var(--monokai-purple);
 }
