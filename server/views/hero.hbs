@@ -1,0 +1,19 @@
+
+<h1 class="mt-5 p-5">Heroes List</h1>
+<br>
+
+<div class = "d-flex flex-wrap justify-content-start bg-white rounded-start-5 w-100 p-5">
+        {{#each heroes}}
+
+            <div class="card me-3 mb-3" style="width: 18rem;">
+                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{format_name name}}_vert.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{localized_name}}</h5>
+                    <p class="card-text">{{localized_name}} is a {{primary_attr}} type hero. The attack range is {{attack_type}} and is usually played as {{roles}}. </p>
+                    <a href="/hero/{{localized_name}}" class="btn btn-primary">Explore Hero</a>
+                </div>
+            </div>
+      
+        <br>
+        {{/each}}
+</div>

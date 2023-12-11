@@ -13,13 +13,16 @@ app.engine("hbs", exphbs.engine({
 	extname: 'hbs', defaultLayout:'index', helpers:{
 		inc: function(value){
 			return parseInt(value)+1;
+		},
+		format_name: function(value){
+			return value.replace('npc_dota_hero_','');
 		}
 	}
 }));
 app.set("view engine","hbs");
 app.set("views","./server/views");
-app.use(express.json({limit:'50mb'}));
-app.use(express.urlencoded({extended: true, limit:'50mb'}));
+//app.use(express.json({limit:'50mb'}));
+//app.use(express.urlencoded({extended: true, limit:'50mb'}));
 app.use('/',router);
 
 app.listen(PORT,'0.0.0.0',()=>{
