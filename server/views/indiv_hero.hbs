@@ -1,0 +1,71 @@
+
+<h1 class="mt-5 pt-5 px-5">{{name}}</h1>
+<br>
+<div class="px-5">
+        <p>Winrate: {{win}}%  -  data taken from recent {{total}} games.</p> 
+        <p>Average Game Duration: {{duration}}</p>
+</div>
+<h3 class="mt-5 pt-5 px-5">Starting Items</h3>
+<div class = "d-flex flex-wrap justify-content-start bg-white rounded-start-5 w-100 px-5">
+        {{#each item.start_game_items}}
+
+            <div class="card me-3 mb-3" style="width: 18rem;">
+                <img src="{{img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{localized_name}}</h5>
+                    <p class="card-text">{{localized_name}} costs {{cost}}</p>
+                    <a href="/hero/{{id}}?name={{localized_name}}" class="btn btn-primary">Explore Hero</a>
+                </div>
+            </div>
+      
+        <br>
+        {{/each}}
+</div>
+<h3 class="mt-5 pt-5 px-5">Early Game Items</h3>
+<div class = "d-flex flex-wrap justify-content-start bg-white rounded-start-5 w-100 px-5">
+        {{#each item.early_game_items}}
+
+            <div class="card me-3 mb-3" style="width: 18rem;">
+                <img src="{{img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{localized_name}}</h5>
+                    <p class="card-text">{{localized_name}} costs {{cost}} </p>
+                    <a href="/hero/{{id}}?name={{localized_name}}" class="btn btn-primary">Explore Hero</a>
+                </div>
+            </div>
+      
+        <br>
+        {{/each}}
+</div>
+<h3 class="mt-5 pt-5 px-5">Mid Game Items</h3>
+<div class = "d-flex flex-wrap justify-content-start bg-white rounded-start-5 w-100 px-5">
+        {{#each item.mid_game_items}}
+
+            <div class="card me-3 mb-3" style="width: 18rem;">
+                <img src="{{img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{localized_name}}</h5>
+                    <p class="card-text">{{localized_name}} costs {{cost}}</p>
+                    <a href="/hero/{{id}}?name={{localized_name}}" class="btn btn-primary">Explore Hero</a>
+                </div>
+            </div>
+      
+        <br>
+        {{/each}}
+</div>
+<h3 class="mt-5 pt-5 px-5">Late Game Items</h3>
+<div class = "d-flex flex-wrap justify-content-start bg-white rounded-start-5 w-100 px-5">
+        {{#each item.late_game_items}}
+
+            <div class="card me-3 mb-3" style="width: 18rem;">
+                <img src="{{img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{localized_name}}</h5>
+                    <p class="card-text">{{localized_name}} costs {{cost}}. </p>
+                    <a href="/hero/{{id}}?name={{localized_name}}" class="btn btn-primary">Explore Hero</a>
+                </div>
+            </div>
+      
+        <br>
+        {{/each}}
+</div>

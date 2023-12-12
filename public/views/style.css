@@ -1,8 +1,4 @@
 :root {
-	--beige: #FAF1E4;
-	--green_vintage: #CEDEBD;
-	--green_food: rgb(158, 179, 132);
-	--green_wedding: rgb(67, 83, 52);
 	--monokai-pink:#FF6188;
 	--monokai-green:#A9DC76;
 	--monokai-yellow:#FFD866;
@@ -21,9 +17,50 @@
 .w-15{
 	width:15%;
 }
+.w-10{
+	width:10%;
+
+}
+.w-90{
+	width:90%;
+
+}
 .icon-link{
 	color:var(--monokai-pink);
 }
 .icon-link:hover{
-	color:var(--monokai-purple);
+	color:var(--monokai-pink);
+}
+.input_area{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index: 2;
+}
+.result_area{
+	position:absolute;
+	right:0;
+}
+.accent{
+	color:var(--monokai-pink);
+}
+.dropdown button{
+	background-color: var(--monokai-pink);
+}
+
+
+.input_area>a:link:hover{
+	color: var(--monokai-yellow);
+}
+.input_area>a:link{
+	text-decoration-line:none;
+	color:white;
+}
+.input_area>a:visited{
+	text-decoration-line:none;
+	color:var(--monokai-yellow);
+}
+a.btn.btn-primary{
+	background-color: var(--monokai-pink);
+	border-color: var(--monokai-blue);
 }
