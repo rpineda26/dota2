@@ -2,23 +2,24 @@
 const sidebar = document.querySelector('#side-bar');
 const section = document.getElementsByClassName('section');
 const sidebar_links = document.querySelectorAll('#side-bar a');
-console.log(section);
-console.log(sidebar);
-console.log(section[0].textContent);
-console.log(sidebar_links);
-
-sidebar.addEventListener("change", function(e){
+sidebar.classList.add('d-none');
+document.addEventListener("wheel", function(e){
 	console.log('99');
-	const true_focus = false;
+	let true_focus = false;
 	for(let i=0;i<section.length-1;i++){
 		console.log(sidebar_links[i].classList);
 		if(sidebar_links[i].classList.contains('active'))
 			true_focus = true;
 	}
-	if(!true_focus)
-		sidebar.style.display = 'none';
-	else
-		sidebar.style.display = 'block';
+	console.log(true_focus);
+	if(!true_focus){
+		sidebar.classList.remove('active');
+		sidebar.classList.add('d-none');
+	}
+	else{
+		sidebar.classList.add('active');
+		sidebar.classList.remove('d-none');
+	}
 });
 
 section[0].addEventListener('click',()=>{
