@@ -5,11 +5,22 @@
 	--monokai-blue:#78DCE8;
 	--monokai-purple:#AB9DF2;
 }
-html, body {
+html{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+}
+body {
     height: 100%; 
     width: 100%; 
     margin: 0; 
 	overflow-y: scroll;
+}
+::-webkit-scrollbar {
+	width: 0px;  /* Remove scrollbar space */
+	background: transparent;  /* Optional: just make scrollbar invisible */
 }
 .top-bar{
 	position:fixed;
@@ -87,15 +98,15 @@ a.btn.btn-primary{
 .footer{
 	background-color: #78DCE8;
 	width: 100%;
-	height: 200px;
+	height: 250px;
+	text-align: center;
+	text-justify: center;
 }
 #side-bar{
 	position:fixed;
-
+	right:0;
 	width:100px;
-
 	top:50%;
-	right:100px;
 	transform: translate(0px, -50%);
 	padding:3px;
 	z-index: 2;
@@ -103,10 +114,16 @@ a.btn.btn-primary{
 
 #side-bar a{
 	
-	color: var(--monokai-pink);
+	color: var(--monokai-blue);
 	text-decoration-line: none;
 	
 }
 #side-bar a.active{
 	color: var(--monokai-yellow);
+}
+#section-1{
+	z-index:2;
+}
+.scrollable{
+	height: 500vh;
 }
