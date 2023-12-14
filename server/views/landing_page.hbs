@@ -3,13 +3,14 @@
 	<head>
 		<meta charse="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/views/style.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-		<script src = "index.js" defer></script>
+		<script src = "/views/index.js" defer></script>
 		<title>DotA</title>
 	</head>
-	<body class ="bg-black" data-bs-spy="scroll" data-bs-target="#side-bar" data-bs-smooth-scroll="false" data-bs-offset="0" >
-			<div class="d-flex px-5 p-3 w-100 bg-white justify-content-between align-items-center home_navbar">
+	<body class ="bg-black w-100 h-100 d-flex">
+		<div class ="bg-white rounded-pill  w-100 top-bar mb-5">
+			<div class="d-flex px-5 pt-3 w-100 bg-white justify-content-between align-items-center">
 				<h1>DotA</h1>
 				<div class="d-flex justify-content-evenly align-items-center">
 					<input class="form-control px-3" type="text" placeholder="Search player name or hero" aria-label="default input example">
@@ -40,35 +41,22 @@
 					</div>
 				</div>
 			</div>
-		
 			
-		<div class = "section" id="section-1">
-			<h1>Discover the meta</h1>
 		</div>
-		<div id ="side-bar" class="d-flex flex-column justify-content-center align-items-center" >
-			<a href="#section-2" class="p-5">Pro</a>
-			<a href="#section-3"class="p-5">Graphs</a>
-			<a href="#section-4"class="p-5">Hero</a>
-			<a href="#section-5"class="p-5">Community</a>
-			<a href="#section-6"class="p-5">Steam</a>
+		<div class ="input_area w-10 p-3">
+			<h1 class="accent">Rubick</h1>
+			<br>
+			<a href="/player">Player</a>
+			<br>
+			<br>
+			<a href="/hero">Hero</a>
+			<br>
+			<br>
+			<a href="/item">Item</a>
+				
 		</div>
-		<div class = "section bg-white" id="section-2">
-			<h1>Follow your favorite pro player</h1>
-		</div>
-		<div class = "section" id="section-3">
-			<h1>Gain insights from useful statistics.</h1>
-		</div>
-		<div class = "section bg-white"id="section-4">
-			<h1>Uncover Hidden Gems</h1>
-		</div>
-		<div class = "section" id="section-5">
-			<h1>Join our community.</h1>
-		</div>
-		<div class = "section bg-white" id="section-6">
-			<h1>Sign in with your steam account.</h1>
-		</div>
-		<div class="footer">
-
+		<div class = "result_area bg-white w-90 h-auto  rounded-start-5 ">
+			{{{body}}}
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	</body>

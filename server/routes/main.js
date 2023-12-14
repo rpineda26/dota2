@@ -4,7 +4,7 @@ const heroController = require('../controllers/hero_controller.js');
 const itemController = require('../controllers/item_controller.js');
 const playerController = require('../controllers/player_controller.js');
 
-router.get('/', function(req,res){res.render('layouts/index')});
+router.get('/', function(req,res){res.render('landing_page',{layout: false})});
 
 router.get('/getHeroes', heroController.getHeroesList);
 router.get('/hero', heroController.getHeroesList);

@@ -5,6 +5,12 @@
 	--monokai-blue:#78DCE8;
 	--monokai-purple:#AB9DF2;
 }
+html, body {
+    height: 100%; 
+    width: 100%; 
+    margin: 0; 
+	overflow-y: scroll;
+}
 .top-bar{
 	position:fixed;
 	top:0px;
@@ -63,4 +69,44 @@
 a.btn.btn-primary{
 	background-color: var(--monokai-pink);
 	border-color: var(--monokai-blue);
+}
+
+.home_navbar{
+	height:80px;
+}
+.section{
+	background-color: var(--monokai-pink);
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer{
+	background-color: #78DCE8;
+	width: 100%;
+	height: 200px;
+}
+#side-bar{
+	position:fixed;
+
+	width:100px;
+
+	top:50%;
+	right:100px;
+	transform: translate(0px, -50%);
+	padding:3px;
+	z-index: 2;
+}
+
+#side-bar a{
+	
+	color: var(--monokai-pink);
+	text-decoration-line: none;
+	
+}
+#side-bar a.active{
+	color: var(--monokai-yellow);
 }
