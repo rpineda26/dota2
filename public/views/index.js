@@ -2,38 +2,24 @@
 const sidebar = document.querySelector('#side-bar');
 const section = document.getElementsByClassName('section');
 const sidebar_links = document.querySelectorAll('#side-bar a');
+const downArrow = document.querySelectorAll('.bi.bi-chevron-compact-down');
+const backTop = document.querySelector('#backtotop');
 
+console.log(downArrow);
 document.body.addEventListener('scroll',()=>{
 	console.log('scroll');
 });
-section[0].addEventListener('click',()=>{
-	console.log('click'+section[0].textContent);
-	section[0].scrollIntoView({behavior:'smooth'});
-});
-section[1].addEventListener('click',()=>{
-	console.log('click');
-	
-	section[1].scrollIntoView({behavior:'smooth'});
 
-});
 
-section[2].addEventListener('click',()=>{
-	console.log('click');
-	section[2].scrollIntoView({behavior:'smooth'});
+for(let i=0;i<downArrow.length;i++){
+	downArrow[i].addEventListener('click',()=>{
+		scrollHere(i+1);
+	});
+}
+backTop.addEventListener('click',()=>{
+	scrollHere(0);
 });
-
-section[3].addEventListener('click',()=>{
-	console.log('click');
-	section[3].scrollIntoView({behavior:'smooth'});
-});
-
-section[4].addEventListener('click',()=>{
-	console.log('click');
-	section[4].scrollIntoView({behavior:'smooth'});
-});
-
-section[5].addEventListener('click',()=>{
-	console.log('click');
-	section[5].scrollIntoView({behavior:'smooth'});
-});
-
+function scrollHere(index){
+	console.log(`scroll to section ${index}`);
+	section[index].scrollIntoView({behavior:'smooth'});
+}
