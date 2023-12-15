@@ -95,6 +95,7 @@ a.btn.btn-primary{
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 1;
 }
 .footer{
 	background-color: #78DCE8;
@@ -103,18 +104,15 @@ a.btn.btn-primary{
 	text-align: center;
 	text-justify: center;
 }
-#side-bar.active{
-	display:flex; 
-	flex-direction: column; 
-	justify-content:center;
-	align-items:center;
-}
+
 #side-bar{
-	position:fixed;
-	right:0;
+	position:sticky;
+	float: right;
 	width:100px;
 	top:50%;
 	transform: translate(0px, -50%);
+	height: 50vh;
+	margin-top: -50vh;
 	padding:3px;
 	z-index: 2;
 }
