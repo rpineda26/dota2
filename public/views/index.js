@@ -3,6 +3,9 @@ const sidebar = document.querySelector('#side-bar');
 const section = document.getElementsByClassName('section');
 const sidebar_links = document.querySelectorAll('#side-bar a');
 
+document.body.addEventListener('scroll',()=>{
+	console.log('scroll');
+});
 section[0].addEventListener('click',()=>{
 	console.log('click'+section[0].textContent);
 	section[0].scrollIntoView({behavior:'smooth'});
