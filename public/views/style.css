@@ -139,8 +139,6 @@ a.btn.btn-primary{
 }
 .bi.bi-chevron-compact-up:hover{
 	color: var(--monokai-yellow);
-	height:48px;
-	width:48px;
 	cursor: pointer;
 }
 .bi.bi-chevron-compact-down{
@@ -149,8 +147,6 @@ a.btn.btn-primary{
 .bi.bi-chevron-compact-down:hover{
 	cursor: pointer;
 	color: var(--monokai-yellow);
-	height:48px;
-	width:48px;
 }
 .filler{
 	visibility: hidden;
