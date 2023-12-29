@@ -27,7 +27,7 @@ html body {
 	position:fixed;
 	top:0px;
 	right:0px;
-	z-index: 2;
+	z-index: 3;
 }
 .w-85{
 	width:85%;
@@ -65,7 +65,9 @@ html body {
 .dropdown button{
 	background-color: var(--monokai-pink);
 }
-
+h1{
+	z-index:2;
+}
 
 .input_area>a:link:hover{
 	color: var(--monokai-yellow);
@@ -85,6 +87,8 @@ a.btn.btn-primary{
 
 .home_navbar{
 	height:80px;
+	position:absolute;
+	z-index:3;
 }
 .section{
 	background-color: black;
@@ -109,12 +113,11 @@ a.btn.btn-primary{
 #side-bar{
 	position:sticky;
 	float: right;
-	width:100px;
+	width:20%;
 	top:50%;
 	transform: translate(0px, -50%);
 	height: 50vh;
 	margin-top: -50vh;
-	padding:3px;
 	z-index: 2;
 }
 
@@ -135,7 +138,7 @@ a.btn.btn-primary{
 }
 .bi.bi-chevron-compact-up{
 	color: var(--monokai-pink);
-	
+	z-index:2;
 }
 .bi.bi-chevron-compact-up:hover{
 	color: var(--monokai-yellow);
@@ -143,6 +146,8 @@ a.btn.btn-primary{
 }
 .bi.bi-chevron-compact-down{
 	color: var(--monokai-pink);
+	z-index:2;
+	scale:0;
 }
 .bi.bi-chevron-compact-down:hover{
 	cursor: pointer;
@@ -150,4 +155,20 @@ a.btn.btn-primary{
 }
 .filler{
 	visibility: hidden;
+}
+.cursor{
+	scale:0;
+	background-color:white;
+	border-radius:100%;
+	position:absolute;
+	box-shadow:
+    0 0 60px 30px #fff,  /* inner white */
+    0 0 100px 60px #f0f, /* middle magenta */
+    0 0 140px 90px #0ff; /* outer cyan */
+	height:5vh;
+	width:5vh;
+	z-index:1;
+	background-image: url(../images/icon.png);
+	opacity:85%;
+	pointer-events: none;
 }
