@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+//gsap.registerPlugin(MotionPathPlugin);
 const sidebar = document.querySelector('#side-bar');
 const section = document.getElementsByClassName('section');
 const sidebar_links = document.querySelectorAll('#side-bar a');
@@ -20,7 +21,37 @@ for(let i=0;i<downArrow.length;i++){
 backTop.addEventListener('click',()=>{
 	section[0].scrollIntoView({behavior:'smooth'});
 });
+/*
+gsap.to(".rect", {
+	motionPath: {
+	  path: "#wave2",
+	  align: "#wave2",
+	  alignOrigin: [0.5, 0.5],
+	},
+	scrollTrigger:{
+		trigger:section[0],
+		start: "top bottom",
+		end: "top top",
+		//scrub:true,
+		markers:true,
+		toggleActions: "restart restart none none",
+	},
+	transformOrigin: "50% 50%",
+	duration:5,
+  });
+*/
 
+gsap.to(backTop,{
+		scrollTrigger:{
+			trigger: '.footer',
+			start:"bottom bottom",
+			end:"bottom bottom",
+			toggleActions: "restart none none none",
+		//	markers:true
+	}, 
+	duration:1,
+	 scale:2
+	});
 for(let i=0;i<downArrow.length;i++){
 	gsap.to(downArrow[i],{
 		scrollTrigger: {
@@ -28,7 +59,7 @@ for(let i=0;i<downArrow.length;i++){
 			start: "top bottom",
 			end: "bottom center",
 			toggleActions: "restart none restart none",
-			markers: true,
+			//markers: true,
 		},
 		duration:0.5,
 		scale:2,
