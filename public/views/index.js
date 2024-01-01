@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 //gsap.registerPlugin(MotionPathPlugin);
 const sidebar = document.querySelector('#side-bar');
 const section = document.getElementsByClassName('section');
@@ -11,11 +12,54 @@ document.body.addEventListener('scroll',()=>{
 	console.log('scroll');
 });
 
+/*
+class App {
+	constructor(){
+		this._init();
+		this._render();
+	}
+	_init(){
+		this._setInitialStates();
+		this._createLenis();
+		this._createIntro();
+	}
+	_setInitialStates(){
+		gsap.set()
+	}
+	_createLenis(){
+		this.lenis = new this.lenis({
+			lerp:0.1
+		});
+	}
+	_render(time){
+		this.lenis.raf(time);
+		requestAnimationFrame(this._render.bind(this));
+	}
+}
+new App();
+*/
+// Setup
+/*= new Lenis({
+	wrapper:document.body,
+	smoothWheel:true,
+});
 
+lenis.on(document.body, (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+*/
 for(let i=0;i<downArrow.length;i++){
 	console.log(section[i]);
 	downArrow[i].addEventListener('click',()=>{
-		section[i+1].scrollIntoView({behavior:'smooth', block:'center'});
+		//section[i+1].scrollIntoView({behavior:'smooth'});
+		gsap.to(document.body,{duration:1, scrollTo:{y:section[i+1].span, offsetY:1000},ease:"power2"});
 	});
 }
 backTop.addEventListener('click',()=>{
@@ -41,6 +85,24 @@ gsap.to(".rect", {
   });
 */
 
+let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
+gsap.utils.toArray('.section').forEach((section, i) => {
+	section.background = section.querySelector('.background');
+	gsap.fromTo(section.background,{
+		backgroundPosition: () => i ? `50% ${-window.innerHeight * getRatio(section)}px` : "50% 0px"
+  }, {
+    backgroundPosition: () => `50% ${window.innerHeight * (1 - getRatio(section))}px`,
+    ease: Linear.easeNone,
+    scrollTrigger: {
+      trigger: section,
+      start: () => i ? "top bottom" : "top top", 
+      end: "bottom top",
+      scrub: true,
+      invalidateOnRefresh: true // to make it responsive
+    }
+});
+});
+
 gsap.to(backTop,{
 		scrollTrigger:{
 			trigger: '.footer',
@@ -52,6 +114,7 @@ gsap.to(backTop,{
 	duration:1,
 	 scale:2
 	});
+	
 for(let i=0;i<downArrow.length;i++){
 	gsap.to(downArrow[i],{
 		scrollTrigger: {

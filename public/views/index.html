@@ -8,11 +8,12 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"></script> 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
 		<script src = "index.js" defer></script>
 		<title>DotA</title>
 	</head>
-	<body class ="bg-black" data-bs-spy="scroll" data-bs-target="#side-bar" data-bs-smooth-scroll="true" data-bs-offset="0" >
+	<body  data-bs-spy="scroll" data-bs-target="#side-bar" data-bs-smooth-scroll="true" data-bs-offset="0" >
 		<div class="cursor"></div>
 			<div class="d-flex px-5 p-3 w-100 bg-white justify-content-between align-items-center home_navbar">
 				<h1>DotA</h1>
@@ -48,6 +49,7 @@
 		
 			
 		<div class = "section" id="section-1">
+			<div class="background" id="bg-section-1"></div>
 			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
 				<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
 			  </svg>
@@ -68,11 +70,40 @@
 				 </g>
 				</svg>
 			-->
+			<svg class="editorial"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 24 150 28 "
+     preserveAspectRatio="none">
+ <defs>
+ <path id="gentle-wave"
+ d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+  </defs>
+  <g class="parallax1">
+   <use xlink:href="#gentle-wave" x="50" y="3" fill="#f461c1"/>
+  </g>
+    <g class="parallax2">
+   <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+    </g>
+      <g class="parallax3">
+   <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
+   </g>
+    <g class="parallax4">
+   <use xlink:href="#gentle-wave" x="50" y="6" fill="#fff"/>  
+  </g>
+</svg>
+
 		</div>
 		<div class="w-100">
 			
 			
-			<div class = "section bg-black text-light" id="section-2">
+			<div class = "section text-light" id="section-2">
+				<div class="background" id="bg-section-2"></div>
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
 				  </svg>
@@ -89,6 +120,7 @@
 				<a href="#section-6"class="p-5">Steam</a>
 			</div>
 			<div class = "section" id="section-3">
+				<div class="background" id="bg-section-3"></div>
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
 				  </svg>
@@ -97,7 +129,8 @@
 					<path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
 				  </svg>
 			</div>
-			<div class = "section bg-black text-light"id="section-4">
+			<div class = "section  text-light"id="section-4">
+				<div id="bg-section-4" class="background"></div>
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
 				  </svg>
@@ -107,6 +140,7 @@
 				  </svg>
 			</div>
 			<div class = "section" id="section-5">
+				<div class="background" id="bg-section-5"></div>
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
 				  </svg>
@@ -115,7 +149,8 @@
 					<path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
 				  </svg>
 			</div>
-			<div class = "section bg-black text-light" id="section-6">
+			<div class = "section text-light" id="section-6">
+				<div class="background" id="bg-section-6"></div>
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class=" filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
 				  </svg>

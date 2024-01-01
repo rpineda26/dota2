@@ -11,12 +11,18 @@ html{
 	margin: 0;
 	padding: 0;
 	overflow-y: hidden;
+	overflow-x:hidden;
 }
-html body {
+ body {
     height: 100%; 
     width: 100%; 
     margin: 0; 
 	overflow-y: scroll;
+	overflow-x:hidden;
+
+}
+[data-hidden]{
+	opacity:0;
 }
 ::-webkit-scrollbar {
 	width: 0px;  /* Remove scrollbar space */
@@ -66,7 +72,8 @@ html body {
 	background-color: var(--monokai-pink);
 }
 h1{
-	z-index:2;
+	z-index:4;
+	text-shadow: 1px 1px 3px black;
 }
 
 .input_area>a:link:hover{
@@ -100,8 +107,19 @@ a.btn.btn-primary{
 	flex-direction:column;
 	align-items: center;
 	justify-content: space-between;
-	z-index: 1;
+	overflow:hidden;
 }
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+  }
 .footer{
 	background-color: #78DCE8;
 	width: 100%;
@@ -130,9 +148,7 @@ a.btn.btn-primary{
 #side-bar a.active{
 	color: var(--monokai-yellow);
 }
-#section-1{
-	z-index:2;
-}
+
 .scrollable{
 	height: 500vh;
 }
@@ -146,8 +162,8 @@ a.btn.btn-primary{
 }
 .bi.bi-chevron-compact-down{
 	color: var(--monokai-pink);
-	z-index:2;
-	scale:0;
+	z-index:3;
+	
 }
 .bi.bi-chevron-compact-down:hover{
 	cursor: pointer;
@@ -174,30 +190,24 @@ a.btn.btn-primary{
 #backtotop{
 	scale:0;
 }
-#section-1{
+#bg-section-1{
 	background-image:url(../images/radiant.jpg);
-	background-size:cover;
 	
 }
-#section-2{
+#bg-section-2{
 	background-image:url(../images/proplayer.jpg);
-	background-size:cover;
 }
-#section-3{
+#bg-section-3{
 	background-image:url(../images/stats.jpg);
-	background-size:cover;
 }
-#section-4{
+#bg-section-4{
 	background-image:url(../images/hero.jpg);
-	background-size:cover;
 }
-#section-5{
+#bg-section-5{
 	background-image:url(../images/joincommunity.jpg);
-	background-size:cover;
 }
-#section-6{
+#bg-section-6{
 	background-image:url(../images/signin.jpg);
-	background-size:cover;
 }
 .spacer{
 	aspect-ratio: 16/9;
@@ -217,4 +227,9 @@ a.btn.btn-primary{
 #visual{
 	width:100%;
 	aspect-ratio: 16/9;
+}
+.editorial{
+	width:100%;
+	height:15%;
+	z-index:2;
 }
