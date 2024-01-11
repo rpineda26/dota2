@@ -8,9 +8,6 @@ const downArrow = document.querySelectorAll('.bi.bi-chevron-compact-down');
 const backTop = document.querySelector('#backtotop');
 console.log(section);
 console.log(downArrow);
-document.body.addEventListener('scroll',()=>{
-	console.log('scroll');
-});
 
 /*
 class App {
@@ -59,7 +56,7 @@ for(let i=0;i<downArrow.length;i++){
 	console.log(section[i]);
 	downArrow[i].addEventListener('click',()=>{
 		//section[i+1].scrollIntoView({behavior:'smooth'});
-		gsap.to(document.body,{duration:1, scrollTo:{y:section[i+1].span, offsetY:1000},ease:"power2"});
+		section[i+1].scrollIntoView({behavior:'smooth'});
 	});
 }
 backTop.addEventListener('click',()=>{
@@ -102,7 +99,30 @@ gsap.utils.toArray('.section').forEach((section, i) => {
     }
 });
 });
+gsap.to(sidebar,{
+	scrollTrigger:{
+		trigger: sidebar,
+		start: "top 20px",
+		end: "max",
+		pin:true,
+		pinSpacing:false,
+		//markers: true,
+	},
+});
+for(let i = 0; i<sidebar_links.length;i++){
+	gsap.to(sidebar_links[i],{
+		scrollTrigger:{
+			trigger: section[i+1],
+			start: "top center",
+			end: "bottom center",
+			toggleActions: "play reset play reset",
+			//markers: true,
+		},
+		duration:0.5,
+		color:'var(--monokai-yellow)',
+	});
 
+}
 gsap.to(backTop,{
 		scrollTrigger:{
 			trigger: '.footer',

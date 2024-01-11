@@ -6,20 +6,20 @@
 	--monokai-purple:#AB9DF2;
 }
 html{
-	height: 100%;
+	height:auto;
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	overflow-y: hidden;
 	overflow-x:hidden;
+	overflow-y:scroll;
 }
+
  body {
-    height: 100%; 
+
     width: 100%; 
     margin: 0; 
-	overflow-y: scroll;
 	overflow-x:hidden;
-
+	overflow-y:scroll;
 }
 [data-hidden]{
 	opacity:0;
@@ -131,9 +131,9 @@ a.btn.btn-primary{
 #side-bar{
 	position:sticky;
 	float: right;
-	width:20%;
-	top:50%;
-	transform: translate(0px, -50%);
+	width:20vw;
+	top:20vh;
+	transform: translate(0px, -50vh);
 	height: 50vh;
 	margin-top: -50vh;
 	z-index: 2;
