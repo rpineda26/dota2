@@ -1,16 +1,22 @@
 <!DOCTYPE>
-<html>
+<html data-bs-spy="scroll" data-bs-target="#side-bar" data-bs-smooth-scroll="true" data-bs-offset="0" >
 	<head>
 		<meta charse="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="/views/style.css">
+		<link rel="icon" href = "/images/icon.png">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
+		<script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script> 
 		<script src = "/views/index.js" defer></script>
 		<title>DotA</title>
 	</head>
-	<body class ="bg-black w-100 h-100 d-flex">
-		<div class ="bg-white rounded-pill  w-100 top-bar mb-5">
-			<div class="d-flex px-5 pt-3 w-100 bg-white justify-content-between align-items-center">
+	<body >
+		<div class="cursor"></div>
+			<div class="d-flex px-5 p-3 w-100 bg-white justify-content-between align-items-center home_navbar">
 				<h1>DotA</h1>
 				<div class="d-flex justify-content-evenly align-items-center">
 					<input class="form-control px-3" type="text" placeholder="Search player name or hero" aria-label="default input example">
@@ -41,22 +47,125 @@
 					</div>
 				</div>
 			</div>
+		
 			
+		<div class = "section" id="section-1">
+			<div class="background" id="bg-section-1"></div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+			  </svg>
+			<h1>Discover the meta</h1>
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+			  </svg>
+
+			 <!-- <svg id="visual" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+				<path id="wave1" d="M0 454L74 454L74 448L148 448L148 466L222 466L222 462L295 462L295 458L369 458L369 464L443 464L443 461L517 461L517 458L591 458L591 445L665 445L665 450L738 450L738 450L812 450L812 446L886 446L886 464L960 464L960 452L960 541L960 541L886 541L886 541L812 541L812 541L738 541L738 541L665 541L665 541L591 541L591 541L517 541L517 541L443 541L443 541L369 541L369 541L295 541L295 541L222 541L222 541L148 541L148 541L74 541L74 541L0 541Z" fill="#9900ff"></path>
+				<path id="wave2" d="M0 464L74 464L74 480L148 480L148 475L222 475L222 462L295 462L295 477L369 477L369 473L443 473L443 466L517 466L517 475L591 475L591 461L665 461L665 478L738 478L738 476L812 476L812 477L886 477L886 476L960 476L960 483L960 541L960 541L886 541L886 541L812 541L812 541L738 541L738 541L665 541L665 541L591 541L591 541L517 541L517 541L443 541L443 541L369 541L369 541L295 541L295 541L222 541L222 541L148 541L148 541L74 541L74 541L0 541Z" fill="#8b00e8"></path>
+				<path class="wave3" d="M0 483L74 483L74 473L148 473L148 474L222 474L222 480L295 480L295 482L369 482L369 492L443 492L443 486L517 486L517 486L591 486L591 492L665 492L665 490L738 490L738 488L812 488L812 480L886 480L886 477L960 477L960 474L960 541L960 541L886 541L886 541L812 541L812 541L738 541L738 541L665 541L665 541L591 541L591 541L517 541L517 541L443 541L443 541L369 541L369 541L295 541L295 541L222 541L222 541L148 541L148 541L74 541L74 541L0 541Z" fill="#7e00d1"></path>
+				<path class="wave4" d="M0 501L74 501L74 493L148 493L148 507L222 507L222 495L295 495L295 502L369 502L369 505L443 505L443 501L517 501L517 506L591 506L591 494L665 494L665 494L738 494L738 496L812 496L812 491L886 491L886 501L960 501L960 495L960 541L960 541L886 541L886 541L812 541L812 541L738 541L738 541L665 541L665 541L591 541L591 541L517 541L517 541L443 541L443 541L369 541L369 541L295 541L295 541L222 541L222 541L148 541L148 541L74 541L74 541L0 541Z" fill="#7000bb"></path>
+				<path class="wave5" d="M0 513L74 513L74 516L148 516L148 505L222 505L222 510L295 510L295 516L369 516L369 519L443 519L443 512L517 512L517 514L591 514L591 511L665 511L665 515L738 515L738 504L812 504L812 509L886 509L886 510L960 510L960 513L960 541L960 541L886 541L886 541L812 541L812 541L738 541L738 541L665 541L665 541L591 541L591 541L517 541L517 541L443 541L443 541L369 541L369 541L295 541L295 541L222 541L222 541L148 541L148 541L74 541L74 541L0 541Z" fill="#6300a5"></path>
+				<path class="wave6" d="M0 525L74 525L74 524L148 524L148 527L222 527L222 518L295 518L295 521L369 521L369 528L443 528L443 519L517 519L517 529L591 529L591 528L665 528L665 522L738 522L738 529L812 529L812 520L886 520L886 529L960 529L960 527L960 541L960 541L886 541L886 541L812 541L812 541L738 541L738 541L665 541L665 541L591 541L591 541L517 541L517 541L443 541L443 541L369 541L369 541L295 541L295 541L222 541L222 541L148 541L148 541L74 541L74 541L0 541Z" fill="#560090"></path>
+				 <g class="rect" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+				 <path d="m11 16c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm-6.25876055-3c1.38071188 0 2.5 1.1192881 2.5 2.5s-1.11928812 2.5-2.5 2.5c-1.38071187 0-2.5-1.1192881-2.5-2.5s1.11928813-2.5 2.5-2.5zm11.57808915.5c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm2.1806714-4.18145901c.8284271 0 1.5.67157288 1.5 1.50000001 0 .8284271-.6715729 1.5-1.5 1.5s-1.5-.6715729-1.5-1.5c0-.82842713.6715729-1.50000001 1.5-1.50000001zm-16-3.31854099c1.38071187 0 2.5 1.11928813 2.5 2.5s-1.11928813 2.5-2.5 2.5-2.5-1.11928813-2.5-2.5 1.11928813-2.5 2.5-2.5zm15.2857894-.79275266c.5522847 0 1 .44771525 1 1s-.4477153 1-1 1c-.5522848 0-1-.44771525-1-1s.4477152-1 1-1zm-9.7857894-5.20724734c1.65685425 0 3 1.34314575 3 3s-1.34314575 3-3 3-3-1.34314575-3-3 1.34314575-3 3-3zm7.5 3c.2761424 0 .5.22385763.5.5s-.2238576.5-.5.5-.5-.22385763-.5-.5.2238576-.5.5-.5z" fill="dodgerblue" fill-rule="evenodd"/>
+				 </g>
+				</svg>
+			-->
+			<svg class="editorial"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 24 150 28 "
+     preserveAspectRatio="none">
+ <defs>
+ <path id="gentle-wave"
+ d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+  </defs>
+  <g class="parallax1">
+   <use xlink:href="#gentle-wave" x="50" y="3" fill="#f461c1"/>
+  </g>
+    <g class="parallax2">
+   <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+    </g>
+      <g class="parallax3">
+   <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
+   </g>
+    <g class="parallax4">
+   <use xlink:href="#gentle-wave" x="50" y="6" fill="#fff"/>  
+  </g>
+</svg>
+
 		</div>
-		<div class ="input_area w-10 p-3">
-			<h1 class="accent">Rubick</h1>
-			<br>
-			<a href="/player">Player</a>
-			<br>
-			<br>
-			<a href="/hero">Hero</a>
-			<br>
-			<br>
-			<a href="/item">Item</a>
-				
+		<div class="w-100">
+			
+			
+			<div class = "section text-light" id="section-2">
+				<div class="background" id="bg-section-2"></div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+				  </svg>
+				<h1>Follow your favorite pro player</h1>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+				  </svg>
+			</div>
+			<div id ="side-bar" class="d-flex flex-column justify-content-center align-items-end" >
+				<a href="#section-2" onclick="lenis.scrollTo('#section-2')"class ="p-5">Pro</a>
+				<a href="#section-3" onclick="lenis.scrollTo('#section-3')" class ="p-5">Graphs</a>
+				<a href="#section-4" onclick="lenis.scrollTo('#section-4')"class ="p-5">Hero</a>
+				<a href="#section-5" onclick="lenis.scrollTo('#section-5')"class ="p-5">Community</a>
+				<a href="#section-6" onclick="lenis.scrollTo('#section-6')"class ="p-5">Steam</a>
+			</div>
+			<div class = "section" id="section-3">
+				<div class="background" id="bg-section-3"></div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+				  </svg>
+				<h1>Gain insights from useful statistics.</h1>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="  bi bi-chevron-compact-down" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+				  </svg>
+			</div>
+			<div class = "section  text-light"id="section-4">
+				<div id="bg-section-4" class="background"></div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+				  </svg>
+				<h1>Uncover Hidden Gems</h1>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class=" bi bi-chevron-compact-down" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+				  </svg>
+			</div>
+			<div class = "section" id="section-5">
+				<div class="background" id="bg-section-5"></div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+				  </svg>
+				<h1>Join our community.</h1>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+				  </svg>
+			</div>
+			<div class = "section text-light" id="section-6">
+				<div class="background" id="bg-section-6"></div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class=" filler bi bi-chevron-compact-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+				  </svg>
+				<h1>Sign in with your steam account.</h1>
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" id="backtotop" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+				  </svg>
+			</div>
 		</div>
-		<div class = "result_area bg-white w-90 h-auto  rounded-start-5 ">
-			{{{body}}}
+		<div class="footer p-5">
+			<h1>Powered By:</h1>
+			<p>opendota</p>
+			<p>stratz</p>
+			<p>official dota2 api</p>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	</body>

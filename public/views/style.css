@@ -191,23 +191,22 @@ a.btn.btn-primary{
 	scale:0;
 }
 #bg-section-1{
-	background-image:url(../images/radiant.jpg);
-	
+	background-image: url(/images/radiant.jpg);/*(../images/radiant.jpg); */
 }
 #bg-section-2{
-	background-image:url(../images/proplayer.jpg);
+	background-image:url(../images/proplayer.jpg);/*(../images/proplayer.jpg);*/
 }
 #bg-section-3{
-	background-image:url(../images/stats.jpg);
+	background-image:url(../images/stats.jpg);/*(../images/stats.jpg);*/
 }
 #bg-section-4{
-	background-image:url(../images/hero.jpg);
+	background-image:url(../images/hero.jpg);/*(../images/hero.jpg);*/
 }
 #bg-section-5{
-	background-image:url(../images/joincommunity.jpg);
+	background-image:url(../images/joincommunity.jpg);/*(../images/joincommunity.jpg);*/
 }
 #bg-section-6{
-	background-image:url(../images/signin.jpg);
+	background-image:url(../images/signin.jpg);/*(../images/signin.jpg);*/
 }
 .spacer{
 	aspect-ratio: 16/9;
